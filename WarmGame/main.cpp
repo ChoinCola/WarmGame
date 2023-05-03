@@ -36,14 +36,14 @@ bool UPDATE()
 		bord.Set_apple(); 
 		applec = true; 
 	}
-	if (bord.CHACK_HEAD(Bug.Frontx(), Bug.Fronty(), Bug.Get_Worm()) == 2) {
+	if (bord.CHACK_HEAD(Bug) == 2) {
 		Bug.Makemove_body();
 		bord.UPDATE_BORD(Bug.Get_Worm());
 		applec = false;
 		score += 500;
 		return true;
 	}
-	else if (bord.CHACK_HEAD(Bug.Frontx(), Bug.Fronty(), Bug.Get_Worm()) < 0)
+	else if (bord.CHACK_HEAD(Bug) < 0)
 		return false;
 	else
 	{
