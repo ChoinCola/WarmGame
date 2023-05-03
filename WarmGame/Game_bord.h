@@ -10,5 +10,5 @@ public:
 	auto Print_bord() ->void;
 	auto Set_apple()->void;
 	auto UPDATE_BORD(Worm_body def) -> void;
-	auto CHACK_HEAD(int x, int y, Worm_body def)->int;
+	auto CHACK_HEAD(Worm def)->int;
 };

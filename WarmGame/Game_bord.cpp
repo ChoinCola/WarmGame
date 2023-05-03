@@ -44,11 +44,11 @@ auto Game_bord::UPDATE_BORD(Worm_body def) -> void
 	*(bord + wdef.x + wdef.y * Bord_size) = wdef.now;
 }
 
-auto Game_bord::CHACK_HEAD(int x, int y, Worm_body def) -> int
+auto Game_bord::CHACK_HEAD(Worm def) -> int
 {
-	if (*(bord + def.x + def.y*Bord_size + (x + y * Bord_size)) == space)
+	if (*(bord + def.Get_Worm().x + def.Get_Worm().y * Bord_size + (def.Frontx() + def.Fronty() * Bord_size)) == space)
 		return 1;
-	else if (*(bord + def.x + def.y * Bord_size + (x + y * Bord_size)) == apple)
+	else if (*(bord + def.Get_Worm().x + def.Get_Worm().y * Bord_size + (def.Frontx() + def.Fronty() * Bord_size)) == apple)
 		return 2;
 
 	return -1;

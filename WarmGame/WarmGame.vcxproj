@@ -141,7 +141,7 @@
   <ItemGroup>
     <ClCompile Include="Game_bord.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="warm.cpp" />
+    <ClCompile Include="worm.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="define.h" />
